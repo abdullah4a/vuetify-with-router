@@ -2,7 +2,7 @@
   <v-card>
     <v-main>
       <v-container>
-      <v-avatar color="teal" rounded size="25"></v-avatar>
+        <v-avatar light color="teal" rounded size="25">AK</v-avatar>
       </v-container>
       <v-container fluid>
         <!-- alert Goes Here -->

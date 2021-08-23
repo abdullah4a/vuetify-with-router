@@ -19,8 +19,11 @@ const routes: Array<RouteConfig> = [
   {
     path: "/*",
     name: "NotFound",
+    // route level code-splitting
+    // this generates a separate chunk (Notfound.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Notfound.vue"),
+      import(/* webpackChunkName: "NotFound" */ "../views/Notfound.vue"),
   },
   {
     path: "/about",

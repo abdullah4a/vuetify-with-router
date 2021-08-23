@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app color="green" dark>
+      <v-app-bar-nav-icon dark @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>
         <span class="heading-1">Vuetify - </span>
         <span>Login </span>
@@ -23,7 +24,7 @@
         small
         dark
         color="green darken-4"
-        @click="$router.push({ path: '/about' })"
+        @click="$router.push({ name: 'About' })"
         class="mx-2"
       >
         <v-icon>mdi-information</v-icon>
@@ -55,6 +56,20 @@
       >
     </v-app-bar>
 
+    <v-navigation-drawer v-model="drawer" color="green" dark app>
+      <!-- -->
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Application
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            subtext
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+    </v-navigation-drawer>
+
     <v-main>
       <router-view />
     </v-main>
@@ -67,5 +82,6 @@ import Component from "vue-class-component";
 @Component
 export default class App extends Vue {
   private login = false;
+  private drawer = false;
 }
 </script>
