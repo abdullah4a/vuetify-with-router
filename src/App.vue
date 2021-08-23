@@ -1,20 +1,55 @@
 <template>
   <v-app>
     <v-app-bar app color="green" dark>
-      <v-tool-bar-title>
+      <v-app-bar-title>
         <span class="heading-1">Vuetify - </span>
         <span>Login </span>
-      </v-tool-bar-title>
+      </v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn left fab small dark color="green darken-4" class="mx-2">
+      <v-btn
+        left
+        fab
+        small
+        dark
+        color="green darken-4"
+        @click="$router.push({ path: '/' })"
+        class="mx-2"
+      >
         <v-icon>mdi-home</v-icon>
       </v-btn>
-      <v-btn left fab small dark color="green darken-4" class="mx-2">
-        <v-icon></v-icon>
-      </v-btn>
-      <v-btn fab small dark color="green darken-4" class="mx-2">
-        <v-icon>mdi-account-circle</v-icon></v-btn
+      <v-btn
+        left
+        fab
+        small
+        dark
+        color="green darken-4"
+        @click="$router.push({ path: '/about' })"
+        class="mx-2"
       >
+        <v-icon>mdi-information</v-icon>
+      </v-btn>
+      <v-btn
+        fab
+        small
+        dark
+        color="green darken-4"
+        class="mx-2"
+        @click="Logout"
+        v-if="!login"
+      >
+        <v-icon>mdi-login</v-icon>
+      </v-btn>
+      <v-btn
+        fab
+        small
+        dark
+        color="green darken-4"
+        class="mx-2"
+        @click="Logout"
+        v-else
+      >
+        <v-icon>mdi-logout </v-icon>
+      </v-btn>
       <v-btn fab small dark color="green darken-4" class="mx-2">
         <v-icon>mdi-heart</v-icon></v-btn
       >
@@ -28,11 +63,16 @@
 
 <script lang="ts">
 import Vue from "vue";
-
-export default Vue.extend({
-  name: "App",
-  data: () => ({
-    //
-  }),
-});
+import Component from "vue-class-component";
+@Component
+export default class App extends Vue {
+  private login = false;
+  Logout() {
+    if (!this.login) {
+      this.login = true;
+    } else {
+      this.login = false;
+    }
+  }
+}
 </script>
