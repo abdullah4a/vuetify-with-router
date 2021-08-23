@@ -34,7 +34,7 @@
         dark
         color="green darken-4"
         class="mx-2"
-        @click="Logout"
+        @click="$router.push({ path: '/getstarted' })"
         v-if="!login"
       >
         <v-icon>mdi-login</v-icon>
@@ -45,7 +45,7 @@
         dark
         color="green darken-4"
         class="mx-2"
-        @click="Logout"
+        @click="$router.push({ path: '/' })"
         v-else
       >
         <v-icon>mdi-logout </v-icon>
@@ -67,12 +67,5 @@ import Component from "vue-class-component";
 @Component
 export default class App extends Vue {
   private login = false;
-  Logout() {
-    if (!this.login) {
-      this.login = true;
-    } else {
-      this.login = false;
-    }
-  }
 }
 </script>

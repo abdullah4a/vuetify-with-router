@@ -1,11 +1,3 @@
 <template>
-  <div><h1>Home Page</h1></div>
+  <v-card></v-card>
 </template>
-
-<script lang="ts">
-import Vue from "vue";
-
-export default Vue.extend({
-  name: "Home",
-});
-</script>
