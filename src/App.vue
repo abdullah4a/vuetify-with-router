@@ -6,26 +6,10 @@
         <span>Login </span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        left
-        fab
-        small
-        dark
-        color="green darken-4"
-        @click="$router.push({ path: '/' })"
-        class="mx-2"
-      >
+      <v-btn left fab small dark color="green darken-4" class="mx-2">
         <v-icon>mdi-home</v-icon>
       </v-btn>
-      <v-btn
-        left
-        fab
-        small
-        dark
-        color="green darken-4"
-        @click="$router.push({ path: '/about' })"
-        class="mx-2"
-      >
+      <v-btn left fab small dark color="green darken-4" class="mx-2">
         <v-icon>mdi-information</v-icon>
       </v-btn>
       <v-btn
