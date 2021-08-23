@@ -1,88 +1,96 @@
 <template>
   <div class="text-right">
-    <v-dialog v-model="dialog" width="500">
-      <template v-slot:activator="{ on, attrs }">
-        <v-divider></v-divider>
-        <v-btn color="green darken-2" dark v-bind="attrs" v-on="on">
-          <v-icon>mdi-login</v-icon>
-          <span>Login</span>
-        </v-btn>
-      </template>
-      <v-card>
-        <v-card-title class="text-h5 black lighten-2">
-          Login
-        </v-card-title>
-
-        <v-card-text>
-          <v-icon>mdi-</v-icon>
-          <v-text-field label="Username"></v-text-field>
-          <v-text-field
-            label="Passwword"
-            counter="10"
-            type="password"
-          ></v-text-field>
-        </v-card-text>
-
-        <v-divider></v-divider>
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="success" text @click="dialog = false">
+    <v-main>
+      <v-dialog v-model="dialog" width="500">
+        <template v-slot:activator="{ on, attrs }">
+          <v-divider></v-divider>
+          <v-btn color="green darken-2" dark v-bind="attrs" v-on="on">
             <v-icon>mdi-login</v-icon>
             <span>Login</span>
           </v-btn>
-          <v-btn color="primary" text @click="dialog = false">
-            <v-icon>mdi-account-plus</v-icon>
-            <span>Register</span>
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-    <v-dialog v-model="dialog" width="500">
-      <template v-slot:activator="{ on, attrs }">
-        <v-divider></v-divider>
-        <v-btn color="green darken-2" dark v-bind="attrs" v-on="on">
-          <v-icon>mdi-account-plus</v-icon>
-          <span>Login</span>
-        </v-btn>
-      </template>
-      <v-card>
-        <v-card-title class="text-h5 black lighten-2">
-          Register
-        </v-card-title>
+        </template>
+        <v-card>
+          <v-card-title class="text-h5 black lighten-2">
+            Login
+          </v-card-title>
 
-        <v-card-text>
-          <v-icon>mdi-</v-icon>
-          <v-text-field label="Full Name"></v-text-field>
-          <v-text-field label="Email" type="email"></v-text-field>
-          <v-text-field label="Username"></v-text-field>
-          <v-text-field
-            label="Passwword"
-            counter="10"
-            type="password"
-          ></v-text-field>
+          <v-card-text>
+            <v-icon>mdi-</v-icon>
+            <v-text-field label="Username"></v-text-field>
             <v-text-field
-            label="Confirm Passwword"
-            counter="10"
-            type="password"
-          ></v-text-field>
-        </v-card-text>
+              label="Passwword"
+              counter="10"
+              type="password"
+            ></v-text-field>
+          </v-card-text>
 
-        <v-divider></v-divider>
+          <v-divider></v-divider>
 
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="success" text @click="dialog = false">
-            <v-icon>mdi-login</v-icon>
-            <span>Login</span>
-          </v-btn>
-          <v-btn color="primary" text @click="dialog = false">
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="success" text @click="dialog = false">
+              <v-icon>mdi-login</v-icon>
+              <span>Login</span>
+            </v-btn>
+            <v-btn color="primary" text @click="dialog = false">
+              <v-icon>mdi-account-plus</v-icon>
+              <span>Register</span>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+      <v-dialog v-model="dialog" width="500">
+        <template v-slot:activator="{ on, attrs }">
+          <v-divider></v-divider>
+          <v-btn
+            color="green darken-2"
+            class="mx-5 rounded-b-xl"
+            dark
+            v-bind="attrs"
+            v-on="on"
+          >
             <v-icon>mdi-account-plus</v-icon>
             <span>Register</span>
           </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+        </template>
+        <v-card>
+          <v-card-title class="text-h5 black lighten-2">
+            Register
+          </v-card-title>
+
+          <v-card-text>
+            <v-icon>mdi-</v-icon>
+            <v-text-field label="Full Name"></v-text-field>
+            <v-text-field label="Email" type="email"></v-text-field>
+            <v-text-field label="Username"></v-text-field>
+            <v-text-field
+              label="Passwword"
+              counter="10"
+              type="password"
+            ></v-text-field>
+            <v-text-field
+              label="Confirm Passwword"
+              counter="10"
+              type="password"
+            ></v-text-field>
+          </v-card-text>
+
+          <v-divider></v-divider>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="success" text @click="dialog = false">
+              <v-icon>mdi-login</v-icon>
+              <span>Login</span>
+            </v-btn>
+            <v-btn color="primary" text @click="dialog = false">
+              <v-icon>mdi-account-plus</v-icon>
+              <span>Register</span>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-main>
   </div>
 </template>
 
