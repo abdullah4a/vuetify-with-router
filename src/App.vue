@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app color="green" dark>
-      <v-app-bar-nav-icon dark @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon dark @click="drawer = !drawer"> </v-app-bar-nav-icon>
       <v-app-bar-title>
         <span class="heading-1">Vuetify - </span>
         <span>Login </span>
@@ -57,15 +57,19 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" color="green" dark app>
-      <!-- -->
-      <v-list-item>
+      <v-list-item
+        v-for="link in linksforNav"
+        :key="link.id"
+        router
+        :to="link.route"
+      >
+        <v-list-item-action>
+          <v-icon class="mx-2">{{ link.icon }}</v-icon>
+        </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            Application
+            {{ link.text }}
           </v-list-item-title>
-          <v-list-item-subtitle>
-            subtext
-          </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-navigation-drawer>
@@ -83,5 +87,11 @@ import Component from "vue-class-component";
 export default class App extends Vue {
   private login = false;
   private drawer = false;
+  private linksforNav = [
+    { icon: "mdi-home", text: "Home", route: "/" },
+    { icon: "mdi-information", text: "About", route: "/aboutinfo" },
+    { icon: "mdi-login", text: "Login", route: "/getstarted" },
+    { icon: "mdi-heart", text: "Favorates", route: "/fav" },
+  ];
 }
 </script>
