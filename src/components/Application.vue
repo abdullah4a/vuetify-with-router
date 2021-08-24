@@ -19,11 +19,11 @@
               <v-expansion-panel-header>
                 <v-row align="center" class="spacer" no-gutters>
                   <v-col cols="4" sm="2" md="1">
-                    <v-avatar size="36px">
+                    <v-avatar size="76px">
                       <img
                         v-if="message.avatar"
                         alt="Avatar"
-                        src="https://i.imgur.com/lF1GKDt.jpg"
+                        src="https://wallpapercave.com/download/pakistan-flag-wallpapers-hd-wp2831483"
                       />
                       <v-icon
                         v-else

@@ -1,5 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <v-app>
+    <v-card>
+      <v-main>
+        <v-banner
+          class=""
+          icon="mdi-information-variant"
+          icon-color="success"
+          elevation="3"
+        >
+          About Us
+        </v-banner>
+      </v-main>
+    </v-card>
+  </v-app>
 </template>

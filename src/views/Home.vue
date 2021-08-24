@@ -1,39 +1,30 @@
 <template>
-  <v-card>
-    <v-main>
-      <v-container>
-        <v-avatar light color="teal" rounded size="25">AK</v-avatar>
-      </v-container>
-      <v-container fluid>
-        <!-- alert Goes Here -->
-        <v-alert border="left" colored-border type="success" elevation="2">
-          Alerts in Vuetify
+  <v-app>
+    <v-card>
+      <v-main>
+        <!-- banner -->
+        <v-banner class="" icon="mdi-view-dashboard" elevation="3">
+          Dashboard
+        </v-banner>
+        <!-- Avatar -->
+        <v-avatar>
+          <v-icon>mdi-files</v-icon>
+        </v-avatar>
+        <!-- Alerts -->
+        <v-alert border="left" type="success" color="green darken-2" dark>
+          alert with a top border and red color
         </v-alert>
-      </v-container>
-      <v-container fluid>
-        <!-- alert Goes Here -->
-        <v-alert border="left" colored-border type="info" elevation="2">
-          Alerts in Vuetify
-        </v-alert>
-      </v-container>
-      <v-container fluid>
-        <!-- alert Goes Here -->
-        <v-alert border="left" colored-border type="error" elevation="2">
-          Alerts in Vuetify
-        </v-alert>
-      </v-container>
-    </v-main>
-    <Application />
-  </v-card>
+        <!-- Breadcrumbs -->
+        <v-breadcrumbs :items="items"> </v-breadcrumbs>
+      </v-main>
+    </v-card>
+  </v-app>
 </template>
 <script lang="ts">
 import Vue from "vue";
-import Application from "../components/Application.vue";
 import Component from "vue-class-component";
-@Component({
-  components: {
-    Application,
-  },
-})
-export default class home extends Vue {}
+@Component
+export default class Home extends Vue {
+  private items = [{}];
+}
 </script>

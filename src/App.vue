@@ -1,6 +1,11 @@
 <template>
   <v-app>
-    <v-app-bar app color="green" dark>
+    <!-- appbar starts in here -->
+    <v-app-bar
+      app
+      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+      dark
+    >
       <v-app-bar-nav-icon dark @click="drawer = !drawer"> </v-app-bar-nav-icon>
       <v-app-bar-title>
         <span class="heading-1">Vuetify - </span>
@@ -18,6 +23,7 @@
       >
         <v-icon>mdi-home</v-icon>
       </v-btn>
+      <!-- L[]g in and L[]g[]ut buttons starts in here -->
       <v-btn
         left
         fab
@@ -51,11 +57,15 @@
       >
         <v-icon>mdi-logout </v-icon>
       </v-btn>
+      <!-- L[]g in and L[]g[]ut buttons end in here -->
+      <!-- Fav icon starts in here -->
       <v-btn fab small dark color="green darken-4" class="mx-2">
-        <v-icon>mdi-heart</v-icon></v-btn
-      >
+        <v-icon @click="$router.push({ path: '/fav' })">mdi-heart</v-icon>
+      </v-btn>
+      <!-- Menu Buttons End in here -->
     </v-app-bar>
-
+    <!-- appbar ends in here -->
+    <!-- Toolbar starts in here -->
     <v-navigation-drawer v-model="drawer" color="green" dark app>
       <v-list-item
         v-for="link in linksforNav"
@@ -64,7 +74,7 @@
         :to="link.route"
       >
         <v-list-item-action>
-          <v-icon class="mx-2">{{ link.icon }}</v-icon>
+          <v-icon class="mx-1">{{ link.icon }}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
@@ -74,7 +84,7 @@
       </v-list-item>
     </v-navigation-drawer>
 
-    <v-main>
+    <v-main class="mx-3">
       <router-view />
     </v-main>
   </v-app>
