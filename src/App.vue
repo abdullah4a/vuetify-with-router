@@ -66,13 +66,8 @@
     </v-app-bar>
     <!-- appbar ends in here -->
     <!-- Toolbar starts in here -->
-    <v-navigation-drawer v-model="drawer" color="green" dark app>
-      <v-list-item
-        v-for="link in linksforNav"
-        :key="link.id"
-        router
-        :to="link.route"
-      >
+    <v-navigation-drawer v-model="drawer" color="green lighten-3" dark app>
+      <v-list-item v-for="link in linksforNav" :key="link.id" :to="link.route">
         <v-list-item-action>
           <v-icon class="mx-1">{{ link.icon }}</v-icon>
         </v-list-item-action>

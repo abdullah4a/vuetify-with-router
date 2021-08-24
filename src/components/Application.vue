@@ -1,9 +1,8 @@
 //just name not an actual application
 <template>
   <!-- App.vue -->
-
   <v-app>
-    <!-- Sizes your content based upon application components -->
+    <!-- Sizes content based upon application components -->
     <v-main color="purple">
       <!-- Provides the application the proper gutter -->
       <v-container color="blue" fluid>
@@ -63,10 +62,12 @@
                 </v-row></v-expansion-panel-header
               >
 
-              <!-- <v-expansion-panel-content>
+              <v-expansion-panel-content>
                 <v-divider></v-divider>
-                <v-card-text v-text="lorem"></v-card-text>
-              </v-expansion-panel-content> -->
+                <v-card-text v-for="LOR in lorem" :key="LOR">{{
+                  LOR
+                }}</v-card-text>
+              </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
         </v-row>
@@ -91,6 +92,10 @@ export default class Application extends Vue {
       excerpt: "Thank you for joining our community...",
     },
   ];
-  private lorem = "ANCNXJ MJSXKSM AKSSXXM";
+  private lorem = [
+    "salkj;dlj sd;lkj;lsd lKJSFD;",
+    "salkj;dlj sd;lkj;lsd lKJSFD;",
+    "salkj;dlj sd;lkj;lsd lKJSFD;",
+  ];
 }
 </script>
