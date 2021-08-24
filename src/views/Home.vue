@@ -2,17 +2,23 @@
   <v-app>
     <v-main>
       <!-- banner -->
-      <v-banner class="" icon="mdi-view-dashboard" elevation="3">
+      <v-banner class="my-3" icon="mdi-view-dashboard" elevation="3">
         Dashboard
       </v-banner>
       <!-- Avatar -->
-      <v-avatar class="mx-2">
-        <v-badge bordered color="warning" icon="mdi-lock" overlap>
-          <v-icon size="36">mdi-file-sync</v-icon>
+      <v-avatar class="mt-3 pa-3">
+        <v-badge color="error" dot overlap offset-x="10" offset-y="10">
+          <v-icon>mdi-file-sync</v-icon>
         </v-badge>
       </v-avatar>
       <!-- Alerts -->
-      <v-alert border="left" type="success" color="green darken-2" dark>
+      <v-alert
+        border="left"
+        class="my-3"
+        type="success"
+        color="green darken-2"
+        dark
+      >
         alert with a top border and red color
       </v-alert>
       <!-- Breadcrumbs -->

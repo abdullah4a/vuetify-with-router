@@ -24,11 +24,6 @@
                         alt="Avatar"
                         src="https://wallpapercave.com/download/pakistan-flag-wallpapers-hd-wp2831483"
                       />
-                      <v-icon
-                        v-else
-                        :color="message.color"
-                        v-text="message.icon"
-                      ></v-icon>
                     </v-avatar>
                   </v-col>
 
@@ -40,15 +35,6 @@
                   </v-col>
 
                   <v-col class="text-no-wrap" cols="5" sm="3">
-                    <v-chip
-                      v-if="message.new"
-                      :color="`${message.color} lighten-4`"
-                      class="ml-0 mr-2 black--text"
-                      label
-                      small
-                    >
-                      {{ message.new }} new
-                    </v-chip>
                     <strong v-html="message.title"></strong>
                   </v-col>
 
