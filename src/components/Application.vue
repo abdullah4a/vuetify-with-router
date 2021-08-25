@@ -72,11 +72,11 @@
       </v-container>
     </v-main>
     <v-footer color="red" app>
-      <v-card app class="red text-center white--text" width="100%">
-        <v-card-text>
+      <v-row>
+        <v-col class="text-center justify" cols="12" md="12" sm="12">
           {{ new Date().getFullYear() }}- <strong>Vuetify </strong>
-        </v-card-text>
-      </v-card>
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
