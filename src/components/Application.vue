@@ -1,4 +1,4 @@
-//just name not an actual application
+// just name not an actual application
 <template>
   <!-- App.vue -->
   <v-app>
@@ -8,7 +8,7 @@
       <v-container color="blue" fluid>
         <v-row justify="center">
           <v-subheader>Today</v-subheader>
-
+          <!-- expansion Panel starts in here -->
           <v-expansion-panels popout>
             <v-expansion-panel
               v-for="(message, i) in messages"
@@ -18,10 +18,10 @@
               <v-expansion-panel-header>
                 <v-row align="center" class="spacer" no-gutters>
                   <v-col cols="4" sm="2" md="1">
-                    <v-avatar size="76px">
+                    <v-avatar size="36px">
                       <img
                         v-if="message.avatar"
-                        alt="Avatar"
+                        alt="error"
                         src="https://wallpapercave.com/download/pakistan-flag-wallpapers-hd-wp2831483"
                       />
                     </v-avatar>
@@ -57,11 +57,24 @@
             </v-expansion-panel>
           </v-expansion-panels>
         </v-row>
+        <v-row justify="center">
+          <v-expansion-panels>
+            <v-expansion-panel v-for="(message, i) in messages" :key="i">
+              <v-expansion-panel-header>
+                Items
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                {{ message.title }}
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </v-row>
       </v-container>
     </v-main>
-
     <v-footer color="red" app>
-      <!-- -->
+      <v-card class="text-center">
+        {{ new Date().getFullYear() }}- <strong>Vuetify </strong>
+      </v-card>
     </v-footer>
   </v-app>
 </template>

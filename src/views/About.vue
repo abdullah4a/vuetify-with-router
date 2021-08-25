@@ -10,7 +10,7 @@
         About Us
       </v-banner>
       <v-container>
-        <v-bottom-sheet v-model="sheet" persistent>
+        <v-bottom-sheet v-model="sheet" inset persistent>
           <template v-slot:activator="{ on, attrs }">
             <v-btn color="green" dark v-bind="attrs" v-on="on">
               Open Persistent
