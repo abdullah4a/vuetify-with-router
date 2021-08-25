@@ -10,17 +10,17 @@
         About Us
       </v-banner>
       <v-card>
-        <v-btn @click="IncreaseTables">
+        <v-btn @click="IncreaseTables" text rounded class="text-subtitle-1">
           <v-icon>mdi-plus</v-icon>
           <span>Add Table</span>
         </v-btn>
         <v-simple-table v-for="tab in tables" :key="tab">
           <template v-slot:default>
             <thead>
-              <tr class="text-h6">
-                <th>Names</th>
-                <th>Items</th>
-                <th>Prices</th>
+              <tr>
+                <th class="text-h6">Names</th>
+                <th class="text-h6">Items</th>
+                <th class="text-h6">Prices</th>
               </tr>
               <tr v-for="n in 3" :key="n" class="success">
                 <td>Name {{ n }}</td>
