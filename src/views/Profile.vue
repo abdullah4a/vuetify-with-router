@@ -4,7 +4,8 @@
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on, attrs }">
           <v-divider></v-divider>
-          <v-btn color="green darken-2" dark v-bind="attrs" v-on="on">
+          <v-btn color="green darken-2" dark v-bind="attrs" v-on="on"
+            @click="register = !register">
             <v-icon>mdi-login</v-icon>
             <span>Login</span>
           </v-btn>
@@ -14,7 +15,6 @@
             dark
             v-bind="attrs"
             v-on="on"
-            @click="register = !register"
           >
             <v-icon>mdi-account-plus</v-icon>
             <span>Register</span>
@@ -34,7 +34,7 @@
               type="password"
             ></v-text-field>
           </v-card-text>
-          <v-card-text v-else>
+          <v-card-text>
             <v-icon>mdi-account-plus</v-icon>
             <v-text-field label="Full Name"></v-text-field>
             <v-text-field label="Email" type="email"></v-text-field>
