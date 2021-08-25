@@ -8,8 +8,8 @@
     >
       <v-app-bar-nav-icon dark @click="drawer = !drawer"> </v-app-bar-nav-icon>
       <v-app-bar-title>
-        <span class="heading-1">Vuetify - </span>
-        <span>Login </span>
+        <span class="text-h5">Vuetify - </span>
+        <span>Dashboard </span>
       </v-app-bar-title>
       <!-- Menu Buttons End in here -->
     </v-app-bar>

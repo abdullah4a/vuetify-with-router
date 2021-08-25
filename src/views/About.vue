@@ -9,6 +9,25 @@
       >
         About Us
       </v-banner>
+      <v-card>
+        <v-btn @click="IncreaseTables">
+        <v-simple-table v-for="tab in tables" :key="tab">
+          <template v-slot:default>
+            <thead>
+              <tr>
+                <th>Names</th>
+                <th>Items</th>
+                <th>Prices</th>
+              </tr>
+              <tr v-for="n in 3" :key="n" class="success">
+                <td>Name {{ n }}</td>
+                <td>Item {{ n }}</td>
+                <td>${{ n * 512 }}</td>
+              </tr>
+            </thead>
+          </template>
+        </v-simple-table>
+      </v-card>
       <v-container>
         <v-bottom-sheet v-model="sheet" inset persistent>
           <template v-slot:activator="{ on, attrs }">
@@ -39,5 +58,9 @@ import Component from "vue-class-component";
 @Component
 export default class Home extends Vue {
   private sheet = false;
+  private tables = 1;
+  IncreaseTables(){
+    return this.tables++;
+  }
 }
 </script>
