@@ -19,36 +19,56 @@
             <thead>
               <tr>
                 <th class="text-h6">Names</th>
-                <th class="text-h6">Items</th>
+                <th class="text-h6">Items Quantity</th>
                 <th class="text-h6">Prices</th>
               </tr>
-              <tr v-for="n in 3" :key="n" class="success">
-                <td>Name {{ n }}</td>
-                <td>Item {{ n }}</td>
-                <td>${{ n * 512 }}</td>
+              <tr v-for="data in tData" :key="data" class="success">
+                <td>{{ data.ItemName }}</td>
+                <td>{{ data.ItemQuantity }}</td>
+                <td>{{ data.ItemPrice }}</td>
               </tr>
             </thead>
           </template>
         </v-simple-table>
       </v-card>
       <v-container>
-        <v-bottom-sheet v-model="sheet" inset persistent>
+        <v-bottom-sheet v-model="sheet">
           <template v-slot:activator="{ on, attrs }">
             <v-btn color="green" dark v-bind="attrs" v-on="on">
               Open Persistent
             </v-btn>
             <span>
-              This is a bottom sheet button which have 'persistent' prop
-              working. After Click please press 'close' button(appears)</span
-            >
+              <v-form> </v-form>
+            </span>
           </template>
-          <v-sheet class="text-center" height="200px">
-            <v-btn class="mt-6" text color="error" @click="sheet = !sheet">
-              'close'
-            </v-btn>
-            <div class="py-3">
-              This is a bottom sheet using the persistent prop
-            </div>
+          <v-sheet class="text-center" height="300px">
+            <v-card>
+              <v-row>
+                <v-text-field
+                  label="Item Name"
+                  v-model="ItemName"
+                ></v-text-field>
+              </v-row>
+              <v-row>
+                <v-text-field
+                  label="Item Quantity"
+                  type="number"
+                  v-model="ItemQuantity"
+                ></v-text-field>
+              </v-row>
+              <v-row>
+                <v-text-field
+                  label="Item Price"
+                  type="number"
+                  v-model="ItemPrice"
+                ></v-text-field>
+              </v-row>
+              <v-btn class="mt-6" text color="error" @click="AddItems">
+                <v-icon>mdi-plus</v-icon>
+                <span>Add Items</span>
+              </v-btn>
+            </v-card>
+            <div class="py-3"></div>
           </v-sheet>
         </v-bottom-sheet>
       </v-container>
@@ -64,6 +84,15 @@ export default class Home extends Vue {
   private tables = 1;
   IncreaseTables() {
     return this.tables++;
+  }
+  private ItemName = "";
+  private ItemPrice = 0;
+  private ItemQuantity = 0;
+  private tData: (string | number)[] = [];
+  AddItems() {
+    this.tData.push(this.ItemName);
+    this.tData.push(this.ItemQuantity);
+    this.tData.push(this.ItemPrice);
   }
 }
 </script>
