@@ -5,7 +5,7 @@
     <!-- Sizes content based upon application components -->
     <v-main color="purple">
       <!-- Provides the application the proper gutter -->
-      <v-container color="blue" fluid>
+      <v-container color="blue">
         <v-row justify="center">
           <v-subheader>Today</v-subheader>
           <!-- expansion Panel starts in here -->
@@ -72,8 +72,10 @@
       </v-container>
     </v-main>
     <v-footer color="red" app>
-      <v-card class="text-center">
-        {{ new Date().getFullYear() }}- <strong>Vuetify </strong>
+      <v-card app class="red text-center white--text" width="100%">
+        <v-card-text>
+          {{ new Date().getFullYear() }}- <strong>Vuetify </strong>
+        </v-card-text>
       </v-card>
     </v-footer>
   </v-app>
@@ -93,8 +95,8 @@ export default class Application extends Vue {
   ];
   private lorem = [
     "salkj;dlj sd;lkj;lsd lKJSFD;",
-    "salkj;dlj sd;lkj;lsd lKJSFD;",
-    "salkj;dlj sd;lkj;lsd lKJSFD;",
+    "salkj;dlj sd;lkj;",
+    "salkj;dlj sd;lkj;D;",
   ];
 }
 </script>
