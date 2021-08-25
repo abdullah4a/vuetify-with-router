@@ -11,10 +11,13 @@
       </v-banner>
       <v-card>
         <v-btn @click="IncreaseTables">
+          <v-icon>mdi-plus</v-icon>
+          <span>Add Table</span>
+        </v-btn>
         <v-simple-table v-for="tab in tables" :key="tab">
           <template v-slot:default>
             <thead>
-              <tr>
+              <tr class="text-h6">
                 <th>Names</th>
                 <th>Items</th>
                 <th>Prices</th>
@@ -59,7 +62,7 @@ import Component from "vue-class-component";
 export default class Home extends Vue {
   private sheet = false;
   private tables = 1;
-  IncreaseTables(){
+  IncreaseTables() {
     return this.tables++;
   }
 }
