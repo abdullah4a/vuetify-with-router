@@ -9,7 +9,7 @@
             dark
             v-bind="attrs"
             v-on="on"
-            @click="register = true"
+            @click="register = false"
           >
             <v-icon>mdi-login</v-icon>
             <span>Login</span>
@@ -20,6 +20,7 @@
             dark
             v-bind="attrs"
             v-on="on"
+            @click="register = true"
           >
             <v-icon>mdi-account-plus</v-icon>
             <span>Register</span>
@@ -28,14 +29,14 @@
         <v-card>
           <v-card-title
             class="text-h5 black lighten-2"
-            v-if="register !== false"
+            v-if="register === false"
           >
             Login
           </v-card-title>
           <v-card-title class="text-h5 black lighten-2" v-else>
             Register
           </v-card-title>
-          <v-card-text v-if="register !== false">
+          <v-card-text v-if="register === false">
             <v-icon>mdi-account</v-icon>
             <v-text-field label="Username"></v-text-field>
             <v-text-field label="Passwword" counter="10" type="password">
