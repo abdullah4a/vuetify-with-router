@@ -27,24 +27,23 @@
           </v-btn>
         </template>
         <v-card>
-          <v-card-title
-            class="text-h5 black lighten-2"
-            v-if="register === false"
-          >
-            Login
+          <v-card-title class="text-h5 lighten-2" v-if="register === false">
+            <span>Login</span>
+            <v-spacer></v-spacer>
+            <v-icon>mdi-account</v-icon>
           </v-card-title>
-          <v-card-title class="text-h5 black lighten-2" v-else>
-            Register
+          <v-card-title class="text-h5 lighten-2" v-else>
+            <span>Register</span>
+            <v-spacer></v-spacer>
+            <v-icon>mdi-account-plus</v-icon>
           </v-card-title>
           <v-card-text v-if="register === false">
-            <v-icon>mdi-account</v-icon>
             <v-text-field label="Username"></v-text-field>
             <v-text-field label="Passwword" counter="10" type="password">
             </v-text-field>
           </v-card-text>
 
           <v-card-text v-else>
-            <v-icon>mdi-account-plus</v-icon>
             <v-text-field label="Full Name"></v-text-field>
             <v-text-field label="Email" type="email"></v-text-field>
             <v-text-field label="Username"></v-text-field>
