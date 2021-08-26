@@ -7,7 +7,7 @@
       dark
     >
       <v-app-bar-nav-icon dark @click="drawer = !drawer"> </v-app-bar-nav-icon>
-      <v-app-bar-title>
+      <v-app-bar-title width="650">
         <span class="text-h5">Vuetify - </span>
         <span>Dashboard </span>
       </v-app-bar-title>
