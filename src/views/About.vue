@@ -54,12 +54,10 @@
             <v-responsive max-width="800px">
               <div class="pt-4">
                 <v-text-field label="Item Name"></v-text-field>
-                <v-text-field
-                  label="Item Quantity"
-                  type="number"
-                ></v-text-field>
+                <v-text-field label="Item Quantity" type="number">
+                </v-text-field>
                 <v-text-field label="Item Price" type="number"></v-text-field>
-                <v-btn class="mt-4" text color="error" @click="AddItems">
+                <v-btn class="ma-4" text color="error" @click="AddItems">
                   <v-icon>mdi-plus</v-icon>
                   <span>Add Items</span>
                 </v-btn>

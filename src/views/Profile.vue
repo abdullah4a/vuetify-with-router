@@ -4,8 +4,13 @@
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on, attrs }">
           <v-divider></v-divider>
-          <v-btn color="green darken-2" dark v-bind="attrs" v-on="on"
-            @click="register = !register">
+          <v-btn
+            color="green darken-2"
+            dark
+            v-bind="attrs"
+            v-on="on"
+            @click="register = true"
+          >
             <v-icon>mdi-login</v-icon>
             <span>Login</span>
           </v-btn>
@@ -21,35 +26,35 @@
           </v-btn>
         </template>
         <v-card>
-          <v-card-title class="text-h5 black lighten-2">
+          <v-card-title
+            class="text-h5 black lighten-2"
+            v-if="register !== false"
+          >
             Login
           </v-card-title>
-
-          <v-card-text v-if="!register">
+          <v-card-title class="text-h5 black lighten-2" v-else>
+            Register
+          </v-card-title>
+          <v-card-text v-if="register !== false">
             <v-icon>mdi-account</v-icon>
             <v-text-field label="Username"></v-text-field>
-            <v-text-field
-              label="Passwword"
-              counter="10"
-              type="password"
-            ></v-text-field>
+            <v-text-field label="Passwword" counter="10" type="password">
+            </v-text-field>
           </v-card-text>
-          <v-card-text>
+
+          <v-card-text v-else>
             <v-icon>mdi-account-plus</v-icon>
             <v-text-field label="Full Name"></v-text-field>
             <v-text-field label="Email" type="email"></v-text-field>
             <v-text-field label="Username"></v-text-field>
-
-            <v-text-field
-              label="Passwword"
-              counter="10"
-              type="password"
-            ></v-text-field>
+            <v-text-field label="Passwword" counter="10" type="password">
+            </v-text-field>
             <v-text-field
               label="Confirm Passwword"
               counter="10"
               type="password"
-            ></v-text-field>
+            >
+            </v-text-field>
           </v-card-text>
           <v-divider></v-divider>
 

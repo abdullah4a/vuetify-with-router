@@ -39,6 +39,7 @@ import Vue from "vue";
 import Component from "vue-class-component";
 @Component
 export default class App extends Vue {
+  // this.$vuetify.theme.dark=true;
   private login = false;
   private drawer = false;
   private linksforNav = [
