@@ -4,6 +4,13 @@
       <!-- banner -->
       <v-banner class="my-3" icon="mdi-view-dashboard" elevation="3">
         Dashboard
+        <!-- Avatar -->
+        <v-avatar class="ma-3 pa-3">
+          <v-badge color="error" dot overlap offset-x="10" offset-y="10">
+            <v-icon>mdi-file-sync</v-icon>
+          </v-badge>
+        </v-avatar>
+        <!-- Alerts -->
       </v-banner>
       <v-row>
         <v-col>
@@ -57,13 +64,7 @@
           </v-slide-item>
         </v-slide-group>
       </v-sheet>
-      <!-- Avatar -->
-      <v-avatar class="ma-3 pa-3">
-        <v-badge color="error" dot overlap offset-x="10" offset-y="10">
-          <v-icon>mdi-file-sync</v-icon>
-        </v-badge>
-      </v-avatar>
-      <!-- Alerts -->
+
       <v-alert
         border="left"
         class="my-3"

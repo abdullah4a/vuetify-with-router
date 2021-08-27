@@ -60,13 +60,13 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="success" text @click="dialog = false">
-              <v-icon>mdi-login</v-icon>
-              <span>Login</span>
-            </v-btn>
             <v-btn color="primary" text @click="dialog = false">
               <v-icon>mdi-account-plus</v-icon>
               <span>Register</span>
+            </v-btn>
+            <v-btn color="success" text @click="dialog = false">
+              <v-icon>mdi-login</v-icon>
+              <span>Login</span>
             </v-btn>
           </v-card-actions>
         </v-card>
